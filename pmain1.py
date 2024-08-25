@@ -20,7 +20,7 @@ my_file = open("coco.txt", "r")
 data = my_file.read()
 class_list = data.split("\n")
 
-count
+count=0
 while True:
     ret,frame = cap.read()
     count += 1
