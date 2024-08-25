@@ -15,17 +15,12 @@ cv2.namedWindow('RGB')
 cv2.setMouseCallback('RGB', RGB)
 
 
-cap=cv2.VideoCapture('road.mp4')
+cap=cv2.VideoCapture('t.mp4')
 my_file = open("coco.txt", "r")
 data = my_file.read()
 class_list = data.split("\n")
 
-tracker=Tracker()
-count=0
-up={}
-cy1=287
-cy2=305
-offset=6
+count
 while True:
     ret,frame = cap.read()
     count += 1
@@ -46,7 +41,7 @@ while True:
         y2 = int(row[3])
         d = int(row[5])
         c = class_list[d]
-        cvzone.putTextRect(frame,f'{id}',(x1,y1),1,1)
+        cvzone.putTextRect(frame,f'{c}',(x1,y1),1,1)
         cv2.rectangle(frame,(x1,y1),(x2,y2),(255,255,0),2)
    
     cv2.imshow("RGB", frame)
